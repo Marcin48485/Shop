@@ -7,6 +7,8 @@ on:
   workflow_dispatch:
   schedule:
       - cron: "0 12 * * *"
+      - cron: "0 14 * * *"
+      - cron: "0 17 * * *"
 jobs:
   test:
     timeout-minutes: 60
@@ -15,6 +17,8 @@ jobs:
     env:
       USER_LOGIN: ${{ secrets.USER_LOGIN }}
       USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
+      USER_LOGIN2: ${{ secrets.USER_LOGIN2 }}
+      USER_PASSWORD2: ${{ secrets.USER_PASSWORD2 }}
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4
