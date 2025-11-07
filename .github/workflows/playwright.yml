@@ -13,7 +13,6 @@ jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
-
     env:
       USER_LOGIN: ${{ secrets.USER_LOGIN }}
       USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
